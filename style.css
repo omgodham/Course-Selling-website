@@ -1,0 +1,756 @@
+:root {
+  --orange: #da722c;
+  --blue: #057ada;
+  --faint-blue: #e8f7fb;
+  --dark-blue: #023047;
+  --dark-violet: #070917;
+  --purple: #6f7dfb;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  max-width: 1366px;
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid rgb(174, 174, 174);
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav,
+.wrapper {
+  max-width: 1134px;
+  margin: 0 auto;
+}
+
+.scrolled {
+  background-color: var(--orange);
+  padding: 0 20px;
+  border-radius: 0px 0px 24px 24px;
+  transition: all 250ms ease;
+}
+.btn {
+  padding: 16px 32px;
+  border-radius: 24px;
+}
+.btn.light {
+  background-color: var(--orange);
+}
+.btn.dark {
+  background-color: var(--dark-blue);
+}
+
+/* hero section */
+
+.hero-section {
+  height: 90vh;
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  position: relative;
+}
+.hero-section nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.mobile-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-color: var(--dark-violet);
+  max-width: 100% !important;
+  height: 100vh;
+  display: none !important;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-nav.active {
+  display: flex !important;
+}
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.mobile-nav img {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+}
+.wrapper .mobile-menu {
+  display: none;
+}
+.hero-section .mobile-nav ul li {
+  margin-bottom: 30px;
+}
+.hero-section .mobile-nav ul li a {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+}
+.hero-section nav .logo {
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  color: #ffffff;
+  flex: 1;
+}
+.hero-section nav ul {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+  align-items: center;
+}
+.hero-section nav ul li a {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hero-section .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+.hero-section .wrapper .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 457px;
+}
+
+.hero-section .wrapper .left h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.hero-section .wrapper .left p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.hero-section .wrapper .left a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+}
+.hero-section .wrapper .left a span {
+  margin-left: 5px;
+}
+.hero-section .wrapper .right {
+  align-self: flex-end;
+}
+.hero-section .wrapper .right img {
+  vertical-align: middle;
+}
+.hero-section .info-card {
+  background: #ffffff;
+  border-radius: 24px;
+  position: absolute;
+  width: 206px;
+  padding: 10px 0;
+  box-shadow: 9px 8px 0px #6f7dfb;
+}
+
+.hero-section .info-card .content {
+  text-align: center;
+  position: relative;
+}
+
+.hero-section .info-card .content h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--dark-blue);
+  margin: 0;
+}
+.hero-section .info-card .content span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--dark-blue);
+}
+.hero-section .info-card.students-enrolled {
+  bottom: 350px;
+  right: 550px;
+}
+
+.hero-section .info-card.overall-rating {
+  bottom: 100px;
+  right: 650px;
+}
+
+/* testimonials */
+.testimonials-section {
+  /* height: 60vh; */
+  margin: 0;
+  margin-top: 100px;
+}
+.testimonials-section .wrapper {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 100px;
+
+  height: 100%;
+}
+.testimonials-section .wrapper .left {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+}
+.testimonials-section .wrapper .left::before {
+  content: "";
+  width: 28px;
+  /* height: 100%; */
+  position: absolute;
+  left: 80px;
+  top: -30px;
+  bottom: -30px;
+  background-color: var(--dark-blue);
+  border-radius: 24px;
+  z-index: -1;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  background: #ffffff;
+  box-shadow: 0px 9px 36px rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+  min-width: 442px;
+}
+.testimonial .heading {
+  background: var(--purple);
+  border-radius: 24px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 24px 32px;
+}
+
+.testimonial.testimonial-two .heading {
+  background: var(--orange);
+}
+.testimonial .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.testimonial .content .content-info h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--dark-blue);
+  margin: 0;
+}
+.testimonial .content .content-info span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--dark-blue);
+}
+
+.testimonial .content img {
+  height: 130px;
+  width: 120px;
+  transform: translateY(-10px);
+}
+
+.testimonial.testimonial-two {
+  transform: translateX(26px);
+}
+.testimonials-section .wrapper .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.testimonials-section .wrapper .right h2 {
+  font-family: "Raleway";
+  font-size: 60px;
+  color: var(--dark-blue);
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.testimonials-section .wrapper .right p {
+  font-family: "Poppins";
+  font-size: 16px;
+  color: var(--dark-blue);
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.testimonials-section .wrapper .right p {
+  font-family: "Poppins";
+  font-size: 18px;
+}
+
+/* courses */
+
+.courses-section {
+  margin-top: 100px;
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+}
+.courses-section .wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0;
+}
+.courses-section .wrapper h2 {
+  font-family: "Raleway";
+  font-size: 60px;
+  text-align: center;
+  color: #ffffff;
+}
+.courses-section .wrapper .cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 85px;
+}
+
+.courses-section .wrapper .cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  background: #ffffff;
+  padding: 0px 32px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.courses-section .wrapper .cards .card::after {
+  content: "";
+  height: 8px;
+  position: absolute;
+  background-color: var(--dark-blue);
+  bottom: 0;
+  width: 90%;
+  border-radius: 24px;
+  margin: 0px 32px;
+}
+.courses-section .wrapper .cards .card .card-image {
+  /* max-width: 462px; */
+  /* max-height: 260px; */
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+}
+
+.courses-section .wrapper .cards .card .card-info {
+  display: flex;
+  /* flex-direction: row;
+  align-items: center; */
+  padding: 0px;
+  margin: 30px 32px;
+  width: 100%;
+  height: 90px;
+}
+
+.courses-section .wrapper .cards .card .card-info h6 {
+  flex: 1;
+  font-family: "Raleway";
+  font-size: 30px;
+  color: var(--dark-blue);
+  margin: 0;
+}
+.courses-section .wrapper .cards .card .card-info span {
+  font-family: "Raleway";
+  font-size: 16px;
+  color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+}
+.courses-section .wrapper .course-btn {
+  width: fit-content;
+  margin-left: auto;
+  margin-top: 40px;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* apps */
+.apps-section {
+  margin-top: 100px;
+}
+.apps-section .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.apps-section .wrapper h2 {
+  font-family: "Raleway";
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+  color: var(--dark-blue);
+}
+.apps-section .wrapper p {
+  font-family: "Poppins";
+  font-size: 16px;
+  color: var(--dark-blue);
+}
+.apps-section .wrapper .apps-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+}
+.apps-section .wrapper .apps-btns .app-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 0, 0);
+  padding: 20px 31px;
+  gap: 14px;
+}
+.apps-section .wrapper .apps-btns .app-btn img {
+  width: 60px;
+  height: 60px;
+}
+.apps-section .wrapper .apps-btns .app-btn span {
+  font-family: "Poppins";
+
+  font-size: 24px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+/* footer */
+.footer-section {
+  background-color: var(--dark-violet);
+  margin-top: 100px;
+}
+.footer-section .wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 70px;
+}
+.footer-section .wrapper .links {
+  display: flex;
+  flex-direction: column;
+}
+.footer-section .wrapper .links h6 {
+  font-family: "Poppins";
+  font-size: 18px;
+  color: var(--orange);
+  margin: 0;
+}
+.footer-section .wrapper .links ul {
+  transform: translateX(15px);
+  padding: 0;
+  list-style: none;
+}
+.footer-section .wrapper .links ul li {
+  margin: 0;
+  margin-bottom: 9px;
+}
+.footer-section .wrapper .links ul li.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  margin-top: 16px;
+}
+.footer-section .wrapper .links ul li form {
+  position: relative;
+}
+.footer-section .wrapper .links ul li form input {
+  height: 39px;
+  background: #ffffff;
+  border-radius: 8px;
+  width: 100%;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  outline: none;
+  color: #000000;
+  padding-left: 20px;
+  padding-right: 180px;
+  height: 40px;
+}
+.footer-section .wrapper .links ul li form input::placeholder {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.5;
+  color: #000000;
+}
+.footer-section .wrapper .links:last-child {
+  flex: 0.6;
+}
+.footer-section .wrapper .links ul li form .subscribe-btn {
+  background: var(--dark-blue);
+  border-radius: 8px;
+  padding: 0 28px;
+  font-family: "Poppins";
+
+  font-size: 16px;
+
+  color: #ffffff;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.footer-section .wrapper.copyright {
+  padding-top: 10px;
+  padding-bottom: 70px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+@media (max-width: 1300px) {
+  .hero-section .info-card {
+    width: 156px;
+    padding: 10px 0;
+  }
+
+  .hero-section .info-card.students-enrolled {
+    bottom: 220px;
+    right: 550px;
+  }
+
+  .hero-section .info-card.overall-rating {
+    bottom: 50px;
+    right: 550px;
+  }
+}
+
+@media (max-width: 1156px) {
+  nav,
+  .wrapper {
+    max-width: 952px;
+  }
+}
+
+@media (max-width: 1000px) {
+  nav,
+  .wrapper {
+    max-width: 852px;
+  }
+  .courses-section .wrapper .cards {
+    gap: 35px;
+  }
+  .testimonial {
+    min-width: 342px;
+  }
+  .testimonials-section .wrapper {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  nav,
+  .wrapper {
+    max-width: 700px;
+  }
+  .hero-section {
+    height: 100%;
+  }
+  .hero-section .wrapper {
+    padding-top: 120px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .hero-section .wrapper .right img {
+    height: 350px;
+    /* width: 100%; */
+  }
+  .hero-section .info-card {
+    width: 156px;
+    padding: 10px 0;
+  }
+
+  .hero-section .info-card.students-enrolled {
+    bottom: 220px;
+    left: 100px;
+  }
+
+  .hero-section .info-card.overall-rating {
+    bottom: 50px;
+    left: 200px;
+  }
+
+  .courses-section .wrapper .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 740px) {
+  nav,
+  .wrapper {
+    max-width: 600px;
+  }
+  .testimonials-section .wrapper {
+    flex-direction: column;
+  }
+  .testimonials-section .wrapper .right {
+    flex-direction: column;
+  }
+  .footer-section .wrapper .links ul {
+    transform: translateX(0);
+  }
+  .footer-section .wrapper .links ul li form .subscribe-btn {
+    top: 160%;
+  }
+  .footer-section .wrapper .links ul li form input {
+    padding-right: 0px;
+  }
+  .hero-section nav ul {
+    gap: 20px;
+  }
+  .footer-section .wrapper {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 640px) {
+  nav,
+  .wrapper {
+    max-width: 90% !important;
+  }
+  section h2 {
+    font-size: 2.7em !important;
+  }
+  .wrapper .mobile-menu {
+    display: block;
+  }
+  .hero-section .wrapper .desktop-menu {
+    display: none;
+  }
+  .footer-section .wrapper {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+  .footer-section .wrapper.copyright {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+  .testimonial.testimonial-two {
+    transform: translateX(0);
+  }
+  .hero-section .info-card {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  section h2 {
+    font-size: 2.3em !important;
+  }
+
+  .apps-section .wrapper .apps-btns {
+    flex-direction: column;
+  }
+  .apps-section .wrapper .apps-btns .app-btn {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px;
+  }
+
+  .apps-section .wrapper .apps-btns .app-btn {
+    padding: 10px 15px;
+    gap: 7px;
+  }
+  .apps-section .wrapper .apps-btns .app-btn img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .hero-section .wrapper .left p {
+    font-size: 18px;
+  }
+
+  .footer-section .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .btn {
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-size: 14px !important;
+  }
+  .apps-section .wrapper p {
+    text-align: center;
+  }
+  .apps-section .wrapper .apps-btns .app-btn span {
+    font-size: 18px;
+  }
+  .courses-section .wrapper .cards .card .card-info h6 {
+    font-size: 24px;
+  }
+  .testimonial .content img {
+    height: 100px;
+    width: 100px;
+  }
+  .testimonial .content .content-info span {
+    font-size: 16px;
+  }
+  .testimonial .content .content-info h3 {
+    font-size: 20px;
+  }
+  .testimonial {
+    min-width: 272px;
+  }
+  .testimonials-section .wrapper .left::before {
+    width: 20px;
+  }
+}
+@media (max-width: 416px) {
+  section h2 {
+    font-size: 2em !important;
+  }
+  .hero-section .wrapper .left p {
+    font-size: 16px;
+  }
+}
